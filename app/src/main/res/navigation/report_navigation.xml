@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/report_navigation"
+    app:startDestination="@id/reportFragment">
+
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.masters.mort.ui.main.report.ReportFragment"
+        android:label="fragment_report"
+        tools:layout="@layout/fragment_report" >
+        <action
+            android:id="@+id/action_reportFragment_to_updateChoiceFragment"
+            app:destination="@id/updateChoiceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateChoiceFragment"
+        android:name="com.masters.mort.ui.main.report.ChoiceUpdateFragment"
+        android:label="fragment_update_choice"
+        tools:layout="@layout/fragment_update_choice" >
+        <action
+            android:id="@+id/action_updateChoiceFragment_to_reportFragment"
+            app:destination="@id/reportFragment" />
+        <argument
+            android:name="deceasedPersonID"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_updateChoiceFragment_to_updateDeceasedPersonFragment"
+            app:destination="@id/updateDeceasedPersonFragment" />
+        <action
+            android:id="@+id/action_updateChoiceFragment_to_updateMortalityFragment"
+            app:destination="@id/updateMortalityFragment" />
+        <argument
+            android:name="isProcessed"
+            app:argType="boolean" />
+        <argument
+            android:name="lowerBoundDate"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateDeceasedPersonFragment"
+        android:name="com.masters.mort.ui.main.report.DeceasedPersonUpdateFragment"
+        android:label="fragment_update_patient"
+        tools:layout="@layout/fragment_update_deceased_person" >
+        <action
+            android:id="@+id/action_updateDeceasedPersonFragment_to_updateChoiceFragment"
+            app:destination="@id/updateChoiceFragment" />
+        <argument
+            android:name="deceasedPersonID"
+            app:argType="string" />
+        <argument
+            android:name="isProcessed"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateMortalityFragment"
+        android:name="com.masters.mort.ui.main.report.MortalityUpdateFragment"
+        android:label="fragment_update_mortality"
+        tools:layout="@layout/fragment_update_mortality" >
+        <action
+            android:id="@+id/action_updateMortalityFragment_to_updateChoiceFragment"
+            app:destination="@id/updateChoiceFragment" />
+        <argument
+            android:name="deceasedPersonID"
+            app:argType="string" />
+        <argument
+            android:name="lowerBoundDate"
+            app:argType="string" />
+    </fragment>
+</navigation>

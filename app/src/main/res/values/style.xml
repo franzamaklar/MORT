@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.AnAutomaticAndroidSlider" parent="Theme.AppCompat.Light.NoActionBar" />
+    <style name="StylisedDatePicker" >
+        <!-- Text color -->
+        <item name="android:textColorPrimary">@color/black</item>
+        <!-- Divider color -->
+        <item name="colorControlNormal">@color/mainColor</item>
+    </style>
+
+    <style name="StylisedDatePickerWhiteThemed" >
+        <!-- Text color -->
+        <item name="android:textColorPrimary">@color/white</item>
+        <!-- Divider color -->
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
+</resources>

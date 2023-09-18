@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "444991406047",
+    "project_id": "mort-project-5e753",
+    "storage_bucket": "mort-project-5e753.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444991406047:android:0eb8eea5b68d3a0b2bce6a",
+        "android_client_info": {
+          "package_name": "com.masters.mort"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "444991406047-dbkd29vd95oa612htdjfc1sin945ojdv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkL7MIfeeJKogL6wrgbX9jOB3N8Mq1o8k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444991406047-dbkd29vd95oa612htdjfc1sin945ojdv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

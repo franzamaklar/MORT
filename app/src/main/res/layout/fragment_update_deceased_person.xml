@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/mainColor"
+    tools:context=".ui.main.report.DeceasedPersonUpdateFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/input_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardBackgroundColor="@color/mainColor"
+        app:cardCornerRadius="30dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/titleDP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/titleForDeceasedPersonInput"
+                android:textSize="20sp"
+                android:gravity = "center"
+                app:fontFamily="@font/montserrat_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/nameInput"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_holder"
+                android:fontFamily="@font/abeezee"
+                android:hint="@string/name"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hintColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleDP" />
+
+            <EditText
+                android:id="@+id/surnameInput"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_holder"
+                android:fontFamily="@font/abeezee"
+                android:hint="@string/surname"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hintColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nameInput" />
+
+            <TextView
+                android:id="@+id/personalIdentifierInput"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_holder"
+                android:fontFamily="@font/abeezee"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/surnameInput" />
+
+            <RadioGroup
+                android:id="@+id/genderHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/personalIdentifierInput"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:singleSelection="true"
+                app:selectionRequired="true">
+
+                <RadioButton
+                    android:id="@+id/genderMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/white"
+                    android:fontFamily="@font/abeezee"
+                    android:text="M"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    />
+
+                <RadioButton
+                    android:id="@+id/genderFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/white"
+                    android:fontFamily="@font/abeezee"
+                    android:text="F"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/lineSeparator"
+                android:layout_width="2dp"
+                android:layout_height="45dp"
+                app:layout_constraintStart_toEndOf="@id/genderHolder"
+                app:layout_constraintTop_toBottomOf="@id/personalIdentifierInput"
+                android:background="@color/white"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                />
+
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="220dp"
+                android:layout_height="100dp"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/lineSeparator"
+                app:layout_constraintTop_toBottomOf="@id/personalIdentifierInput"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/white"
+                android:theme="@style/StylisedDatePickerWhiteThemed"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/backToPreviousFragment"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintTop_toBottomOf="@id/input_holder"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/saveButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/ic_arrow_back_white"
+        />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/backToPreviousFragment"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_holder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/button_design"
+        android:text="@string/save"
+        android:textSize="20sp"
+        android:layout_marginBottom="50dp"
+        app:fontFamily="@font/montserrat_medium"
+        android:padding="10dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

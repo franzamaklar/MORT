@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".ui.main.input.MortalityInputFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/input_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardBackgroundColor="@color/mainColor"
+        app:cardCornerRadius="30dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/titleMORT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/titleForMORTInput"
+            android:textSize="20sp"
+            app:fontFamily="@font/montserrat_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/descriptionWithDeceasedPersonID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/DeceasedPersonHolder"
+            android:textSize="18sp"
+            app:fontFamily="@font/montserrat"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/titleMORT"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/lineSeparator"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/descriptionWithDeceasedPersonID"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            />
+
+        <Spinner
+            android:id="@+id/causesSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/lineSeparator"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/abeezee"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/white"
+            android:spinnerMode="dialog"
+            />
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="220dp"
+            android:layout_height="100dp"
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/causesSpinner"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/white"
+            android:theme="@style/StylisedDatePickerWhiteThemed"
+            />
+
+        <TextView
+            android:id="@+id/deathDateTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/deathDateTitle"
+            android:textSize="17sp"
+            app:fontFamily="@font/montserrat_medium"
+            app:layout_constraintTop_toBottomOf="@id/datePicker"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <EditText
+            android:id="@+id/placeInput"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/input_holder"
+            android:fontFamily="@font/abeezee"
+            android:hint="@string/place"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/hintColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/deathDateTitle"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_holder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/button_design"
+        android:text="@string/save"
+        android:textSize="20sp"
+        app:fontFamily="@font/montserrat_medium"
+        android:padding="10dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

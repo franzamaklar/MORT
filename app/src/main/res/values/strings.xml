@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">MORT</string>
+    <string name="login">Login</string>
+    <string name="e_mail">E-mail</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="account_inquiry">Don\'t have an account?</string>
+    <string name="account_inquiry_II">Already have an account?</string>
+    <string name="create_account">Create account</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="continueToReset">Continue</string>
+    <string name="descriptionForgotPassword">A link will be sent directly to your email. Check your spam folder if you don’t see it in your inbox.</string>
+    <string name="confirmationReset">A password reset link has been sent to your email.</string>
+    <string name="titleForDeceasedPersonInput">PERSONAL DECEASED PERSON DATA</string>
+    <string name="titleForMORTInput">MORTALITY DATA</string>
+    <string name="DeceasedPersonHolder">Inserting mortality data for Deceased Person</string>
+    <string name="DeceasedPersonUpdate">Updating mortality data for Deceased Person</string>
+    <string name="deathDateTitle">Date of death</string>
+    <string name="place">Place of death</string>
+    <string name="OIB">Personal Identification Number</string>
+    <string name="backToLogin">Back to Login</string>
+    <string name="save">SAVE DATA</string>
+    <string name="loading">PREPARING APPLICATION FOR YOU.\nPLEASE WAIT</string>
+    <string name="reports">REPORTS</string>
+    <string name="back_to_main">BACK TO MAIN</string>
+    <string name="update_deceased_person">UPDATE DECEASED PERSON INFO</string>
+    <string name="update_mortality">UPDATE MORTALITY INFO</string>
+    <string name="statistics">STATISTICS</string>
+    <string name="logout">LOG OUT</string>
+    <string name="update_personal_data">UPDATE PERSONAL DATA</string>
+    <string name="exportAndSend">EXPORT AND SEND TO EMAIL</string>
+
+    <string-array name="causes">
+        <item>Karcinom</item>
+        <item>Oslabljeno srce</item>
+        <item>Moždani udar</item>
+        <item>Samoubojstvo</item>
+        <item>Nasilna smrt</item>
+    </string-array>
+
+    <string-array name="years">
+        <item>0–12</item>
+        <item>13–26</item>
+        <item>27–40</item>
+        <item>41–56</item>
+        <item>>57</item>
+    </string-array>
+
+    <string-array name="fields">
+        <item>Name:</item>
+        <item>Surname:</item>
+        <item>Birth date:</item>
+        <item>Gender:</item>
+        <item>Personal Identification Number:</item>
+        <item>Death cause:</item>
+        <item>Death date:</item>
+        <item>Death place:</item>
+    </string-array>
+
+    <string-array name="initialsOfCauses">
+        <item>K-1</item>
+        <item>M-2</item>
+        <item>S-3</item>
+        <item>N-4</item>
+        <item>O-5</item>
+    </string-array>
+
+</resources>

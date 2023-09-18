@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/deceasedPersonInputFragment">
+
+    <fragment
+        android:id="@+id/deceasedPersonInputFragment"
+        android:name="com.masters.mort.ui.main.input.DeceasedPersonInputFragment"
+        android:label="fragment_patient_input"
+        tools:layout="@layout/fragment_deceased_person_input" >
+        <action
+            android:id="@+id/action_patientInputFragment_to_mortalityInputFragment"
+            app:destination="@id/mortalityInputFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mortalityInputFragment"
+        android:name="com.masters.mort.ui.main.input.MortalityInputFragment"
+        android:label="fragment_mortality_input"
+        tools:layout="@layout/fragment_mortality_input" >
+        <action
+            android:id="@+id/action_mortalityInputFragment_to_deceasedPersonInputFragment"
+            app:destination="@id/deceasedPersonInputFragment" />
+        <argument
+            android:name="deceasedPersonId"
+            app:argType="string"/>
+        <argument
+            android:name="lowerBoundDate"
+            app:argType="string" />
+    </fragment>
+</navigation>

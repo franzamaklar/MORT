@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".ui.authentication.CreateAccountFragment">
+
+    <TextView
+        android:id="@+id/registerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/sfprodisplaybold"
+        android:text="@string/create_account"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:layout_margin="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/nameInput"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_holder"
+        android:fontFamily="@font/abeezee"
+        android:hint="@string/name"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hintColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerTitle" />
+
+    <EditText
+        android:id="@+id/surnameInput"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_holder"
+        android:fontFamily="@font/abeezee"
+        android:hint="@string/surname"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hintColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameInput" />
+
+    <RadioGroup
+        android:id="@+id/genderHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/surnameInput"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:singleSelection="true"
+        app:selectionRequired="true">
+
+        <RadioButton
+            android:id="@+id/genderMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/black"
+            android:fontFamily="@font/abeezee"
+            android:text="M"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            />
+
+        <RadioButton
+            android:id="@+id/genderFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/black"
+            android:fontFamily="@font/abeezee"
+            android:text="F"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/lineSeparator"
+        android:layout_width="2dp"
+        android:layout_height="45dp"
+        app:layout_constraintStart_toEndOf="@id/genderHolder"
+        app:layout_constraintTop_toBottomOf="@id/surnameInput"
+        android:background="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        />
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="220dp"
+        android:layout_height="100dp"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/lineSeparator"
+        app:layout_constraintTop_toBottomOf="@id/surnameInput"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/black"
+        android:theme="@style/StylisedDatePicker"
+        />
+
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/input_holder"
+        android:fontFamily="@font/abeezee"
+        android:hint="@string/e_mail"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hintColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/datePicker"
+        />
+
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:inputType="textPassword"
+        android:background="@drawable/input_holder"
+        android:fontFamily="@font/abeezee"
+        android:hint="@string/password"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hintColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailInput"
+        />
+
+    <Spinner
+        android:id="@+id/countySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/passwordInput"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/abeezee"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/black"
+        android:spinnerMode="dialog"
+        />
+
+    <CheckBox
+        android:id="@+id/checkForConsent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/countySpinner"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/abeezee"
+        android:text="I agree with Terms and Conditions"
+        android:buttonTint="@color/mainColor"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/create_account"
+        android:fontFamily="@font/abeezee_italic"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkForConsent"
+        android:background="@drawable/button_design"
+        />
+
+    <TextView
+        android:id="@+id/accountInquiry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonRegister"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/abeezee"
+        android:textSize="17dp"
+        android:text="@string/account_inquiry_II"
+        android:textColor="@color/gray"
+        />
+
+    <TextView
+        android:id="@+id/signRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@id/accountInquiry"
+        app:layout_constraintTop_toBottomOf="@id/accountInquiry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/abeezee_italic"
+        android:textSize="17dp"
+        android:text="@string/sign_in"
+        android:textColor="@color/buttonColor"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
