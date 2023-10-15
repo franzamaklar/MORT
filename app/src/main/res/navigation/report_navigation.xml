@@ -12,7 +12,12 @@
         tools:layout="@layout/fragment_report" >
         <action
             android:id="@+id/action_reportFragment_to_updateChoiceFragment"
-            app:destination="@id/updateChoiceFragment" />
+            app:destination="@id/updateChoiceFragment"
+            app:enterAnim="@anim/slide_from_left"
+            app:exitAnim="@anim/slide_to_right"
+            app:popEnterAnim="@anim/slide_from_right"
+            app:popExitAnim="@anim/slide_to_left"
+            />
     </fragment>
     <fragment
         android:id="@+id/updateChoiceFragment"
@@ -21,16 +26,25 @@
         tools:layout="@layout/fragment_update_choice" >
         <action
             android:id="@+id/action_updateChoiceFragment_to_reportFragment"
-            app:destination="@id/reportFragment" />
+            app:destination="@id/reportFragment"
+            app:enterAnim="@anim/slide_from_left"
+            app:exitAnim="@anim/slide_to_right"
+            app:popEnterAnim="@anim/slide_from_right"
+            app:popExitAnim="@anim/slide_to_left"
+            />
         <argument
             android:name="deceasedPersonID"
             app:argType="string" />
         <action
             android:id="@+id/action_updateChoiceFragment_to_updateDeceasedPersonFragment"
-            app:destination="@id/updateDeceasedPersonFragment" />
+            app:destination="@id/updateDeceasedPersonFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_from_down" />
         <action
             android:id="@+id/action_updateChoiceFragment_to_updateMortalityFragment"
-            app:destination="@id/updateMortalityFragment" />
+            app:destination="@id/updateMortalityFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_from_down" />
         <argument
             android:name="isProcessed"
             app:argType="boolean" />
@@ -45,7 +59,9 @@
         tools:layout="@layout/fragment_update_deceased_person" >
         <action
             android:id="@+id/action_updateDeceasedPersonFragment_to_updateChoiceFragment"
-            app:destination="@id/updateChoiceFragment" />
+            app:destination="@id/updateChoiceFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_from_down" />
         <argument
             android:name="deceasedPersonID"
             app:argType="string" />
@@ -60,7 +76,10 @@
         tools:layout="@layout/fragment_update_mortality" >
         <action
             android:id="@+id/action_updateMortalityFragment_to_updateChoiceFragment"
-            app:destination="@id/updateChoiceFragment" />
+            app:destination="@id/updateChoiceFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_from_down"
+            />
         <argument
             android:name="deceasedPersonID"
             app:argType="string" />

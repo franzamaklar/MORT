@@ -12,7 +12,12 @@
         tools:layout="@layout/fragment_deceased_person_input" >
         <action
             android:id="@+id/action_patientInputFragment_to_mortalityInputFragment"
-            app:destination="@id/mortalityInputFragment" />
+            app:destination="@id/mortalityInputFragment"
+            app:enterAnim="@anim/slide_from_left"
+            app:exitAnim="@anim/slide_to_right"
+            app:popEnterAnim="@anim/slide_from_right"
+            app:popExitAnim="@anim/slide_to_left"
+            />
     </fragment>
     <fragment
         android:id="@+id/mortalityInputFragment"
@@ -21,7 +26,12 @@
         tools:layout="@layout/fragment_mortality_input" >
         <action
             android:id="@+id/action_mortalityInputFragment_to_deceasedPersonInputFragment"
-            app:destination="@id/deceasedPersonInputFragment" />
+            app:destination="@id/deceasedPersonInputFragment"
+            app:enterAnim="@anim/slide_from_left"
+            app:exitAnim="@anim/slide_to_right"
+            app:popEnterAnim="@anim/slide_from_right"
+            app:popExitAnim="@anim/slide_to_left"
+            />
         <argument
             android:name="deceasedPersonId"
             app:argType="string"/>

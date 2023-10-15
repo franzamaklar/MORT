@@ -54,7 +54,7 @@ class MortalityUpdateFragment : Fragment() {
     private fun fillFields() {
         viewModelMortality.getMortalityByDeceasedPersonID(args.deceasedPersonID).observe(viewLifecycleOwner) {
             if (it != null) {
-                binding.descriptionWithPatientID.text = it.deceasedPersonID
+                binding.descriptionWithPatientID.text = String.format("Updating for deceased: ${it.deceasedPersonID}");
                 selectedCause = it.mortalityCause
                 binding.placeInput.hint = it.deathPlace
                 val maxDate = it.deathDateTime.split("/")
